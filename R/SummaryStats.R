@@ -2,13 +2,13 @@
 #'
 #' @description This function outputs minimum, maximum, and mean summary statistics for quantitative measurements for defined categories in the data set.
 #'
-#' @param data The data set to run summary statistics on
+#' @param data The data frame used to run summary statistics.
 #'
-#' @param category The defined category that statistics are calculated within
+#' @param category The category that the data is sorted by for further statistic calculations.
 #'
-#' @param values The quantitative data values to run statistics on
+#' @param values The quantitative numerical data values used to run statistics
 #'
-#' @return A tibble with the summary statistic information
+#' @return A tibble with the summary statistic information: minimum, maximum, and mean.
 #' @export
 
 

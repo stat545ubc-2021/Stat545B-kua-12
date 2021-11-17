@@ -7,14 +7,14 @@
 Function1(data, category, values)
 }
 \arguments{
-\item{data}{The data set to run summary statistics on}
+\item{data}{The data frame used to run summary statistics.}
 
-\item{category}{The defined category that statistics are calculated within}
+\item{category}{The category that the data is sorted by for further statistic calculations.}
 
-\item{values}{The quantitative data values to run statistics on}
+\item{values}{The quantitative numerical data values used to run statistics}
 }
 \value{
-A tibble with the summary statistic information
+A tibble with the summary statistic information: minimum, maximum, and mean.
 }
 \description{
 This function outputs minimum, maximum, and mean summary statistics for quantitative measurements for defined categories in the data set.
