@@ -9,8 +9,8 @@
 #' @param values The quantitative numerical data values used to run statistics
 #'
 #' @return A tibble with the summary statistic information: minimum, maximum, and mean.
+#'
 #' @export
-
 
 Function1 <- function(data, category, values) {
   data %>%

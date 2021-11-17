@@ -6,6 +6,7 @@ output: github_document
 ---
 
 ## R Package Description: 
+#### Package name: Stat545BAndreaKu
 #### This package runs summary statistics with dplyr on data from the datateachr package. Summary statistics include minimum, maximum, and mean.
 
 ## Installation Instructions:
@@ -13,14 +14,14 @@ output: github_document
 
 ```{r}
 # install.packages("devtools")
-devtools::install_github("AndreaKu/Stat545BAndreaKu")
+devtools::install_github("https://github.com/stat545ubc-2021/Stat545BAndreaKu.git")
 ```
 
 ## Usage is demonstrated with data from the datateachr package: 
 #### Examples are included for the Flow_samples, Vancouver_trees, and Cancer sample datasets.
 
 ```{r}
-library(function1)
+library(Stat545BAndreaKu)
 
 #' @example
 #' 1. An example of the function ran in Flow_Samples dataset
@@ -42,4 +43,4 @@ Function1(datateachr::vancouver_trees,genus_name,diameter)
 #' @description Calculates summary statistics for each diagnosis type.
 
 Function1(datateachr::cancer_sample,diagnosis,radius_mean)
-
+```
