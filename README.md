@@ -22,25 +22,17 @@ devtools::install_github("https://github.com/stat545ubc-2021/Stat545BAndreaKu.gi
 ```{r}
 library(Stat545BAndreaKu)
 
-#' @example
-#' 1. An example of the function ran in Flow_Samples dataset
-#'
-#' @description  Flow Summary statistics from MDA:
 
+#' @example
+#' # An example of the function ran in Flow_Samples data set
 Function1(datateachr::flow_sample,month,flow)
 
 #' @example
-#' 2. An example of the function ran in Vancouver_Trees dataset
-#'
-#' @description Calculates summary statistics for each genus name.
-
+#' # An example of the function ran in Vancouver_Trees data set
 Function1(datateachr::vancouver_trees,genus_name,diameter)
 
 #' @example
-#' 3. An example of the function ran in Cancer_Sample dataset
-#'
-#' @description Calculates summary statistics for each diagnosis type.
-
+#' # An example of the function ran in Cancer_Sample data set
 Function1(datateachr::cancer_sample,diagnosis,radius_mean)
 ```
 
