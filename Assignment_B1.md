@@ -112,7 +112,7 @@ print(FlowSummary)
 ``` r
 # Flow Sample Example
 
-Function1(flow_sample,month,flow)
+is(Function1(flow_sample,month,flow))
 ```
 
     ## # A tibble: 11 x 4

@@ -26,11 +26,11 @@ library(testthat)
 #'
 #' @description This function outputs minimum, maximum, and mean summary statistics for flow measurements for each recorded month in the flow_samples data set. The function identifies the data, groups by a given category, and calculates summary statistics for the measured values.
 #'
-#' @params data The data set: flow_samples. I named the parameter "data" to identify that the function is seeking the sourced data set.
+#' @param data The data set: flow_samples. I named the parameter "data" to identify that the function is seeking the sourced data set.
 #' #
-#' @params category The category to calculate the statistics in: month. I named the parameter "category" to identify that the function is grouping the data set into seperate categories, and is asking for specification on which columns to group the outputs into. 
+#' @param category The category to calculate the statistics in: month. I named the parameter "category" to identify that the function is grouping the data set into seperate categories, and is asking for specification on which columns to group the outputs into. 
 #' 
-#' @params values The data values to run statistics on: flow. I named the parameter
+#' @param values The data values to run statistics on: flow. I named the parameter
 #' 
 #' @return A tibble with the summary statistic information 
 
@@ -71,6 +71,11 @@ print(FlowSummary)
 Function1(flow_sample,month,flow)
 ```
 
+```{r}
+# Flow Sample Example
+is(Function1(flow_sample,month,flow))
+```
+
 ###### Example 2
 
 ###### Using the Vancouver Trees data set, the function is calculating the miniumum, maximum, and the mean for the diameter for each genus name. 
@@ -80,6 +85,11 @@ Function1(flow_sample,month,flow)
 Function1(vancouver_trees,genus_name,diameter)
 ```
 
+```{r}
+# Vancouver Trees Example
+is(Function1(vancouver_trees,genus_name,diameter))
+```
+
 ###### Example 3
 
 ###### Using the cancer sample data set, the function is calculating the miniumum, maximum, and the mean for the mean radius for each diagnosis type. 
@@ -87,6 +97,11 @@ Function1(vancouver_trees,genus_name,diameter)
 ```{r}
 # Cancer Sample Example
 Function1(cancer_sample,diagnosis,radius_mean)
+```
+
+```{r}
+# Cancer Sample Example
+is(Function1(cancer_sample,diagnosis,radius_mean))
 ```
 
 # Exercise 4: Test the Function
@@ -129,6 +144,8 @@ Testing <- test_that("Testing function", {
   expect_true(is.numeric(flow_sample$flow))
   expect_error(Function_test(flow_sample,month))
   expect_error(Function_test(flow_sample,flow))
+  expect_s3_class(Function_test(flow_sample,month,flow), c("tbl_df", "tbl", "data.frame", "list"))
+
 
 })
 
