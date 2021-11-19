@@ -144,6 +144,8 @@ Testing <- test_that("Testing function", {
   expect_true(is.numeric(flow_sample$flow))
   expect_error(Function_test(flow_sample,month))
   expect_error(Function_test(flow_sample,flow))
+  expect_s3_class(Function_test(flow_sample,month,flow), c("tbl_df", "tbl", "data.frame", "list"))
+
 
 })
 
